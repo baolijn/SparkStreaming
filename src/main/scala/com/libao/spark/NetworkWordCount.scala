@@ -7,7 +7,7 @@ object NetworkWordCount {
 
   def main(args: Array[String]): Unit = {
 
-    val sparkConf = new SparkConf().setMaster("local").setAppName("NetworkWordCount")
+    val sparkConf = new SparkConf().setMaster("local[2]").setAppName("NetworkWordCount")
 
     /**
       * 创建StreamingContext需要两个参数：SparkConf和batch interval
